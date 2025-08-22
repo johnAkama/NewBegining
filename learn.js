@@ -14,10 +14,18 @@ if(numberToCompared > 0) {
     alert(0);
 } */
 
-let result;
+/* let result;
 
-if (a + b < 4) {
-    result = 'Below';
+a + b < 4 ? (result = 'Below') : (result = 'Over') */
+
+let message;
+
+if (login == 'Employee') {
+  message = 'Hello';
+} else if (login == 'Director') {
+  message = 'Greetings';
+} else if (login == '') {
+  message = 'No login';
 } else {
-    result = 'Over';
+  message = '';
 }
