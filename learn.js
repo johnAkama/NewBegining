@@ -18,8 +18,7 @@ if(numberToCompared > 0) {
 
 a + b < 4 ? (result = 'Below') : (result = 'Over') */
 
-
-let message =
+/* let message =
     login === 'Employee'
         ? (message = 'Hello')
         : login === 'Director'
@@ -27,3 +26,30 @@ let message =
         : (login = '' ? (message = 'No login') : (message = ''));
 
 alert(message);
+ */
+/* 
+alert( null || 2 || undefined ); */
+/* 
+if (-1 || 0) alert('first'); */
+
+/* let i = 0;
+while (++i < 5) alert( i );
+ */
+
+/* let i = 0;
+while (i++ < 5) alert( i ) */
+
+/* for (let i = 0; i < 5; i++) alert( i ) */
+
+/* for (let i = 0; i < 5; ++i) alert( i ) */
+
+/* for (let i = 2; i <= 10; i++) {
+    if (i % 2 === 0) {
+        alert(i); 
+    }
+} */
+
+let i = 0;
+while (i < 3) {
+    alert(`number ${i++}!`)
+}
