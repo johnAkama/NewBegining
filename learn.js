@@ -49,7 +49,30 @@ while (i++ < 5) alert( i ) */
     }
 } */
 
-let i = 0;
+/* let i = 0;
 while (i < 3) {
     alert(`number ${i++}!`)
+}
+ */
+
+//Declare the varible
+/* let n = prompt('enter number', 'Type here');
+for (let i = 2; i <= n; i++) {
+    let isPrime = true;
+    for (let j = 2; j < i; j++) {
+        console.log(`evaluer ` + i + ` avec ` + j);
+        if (i % j === 0) {
+            isPrime = false;
+            /* console.log(`Remove` + i);
+            break;
+        }
+    }
+    if (isPrime) {
+        console.log(`kept` + i);
+    }
+} */
+
+//Function
+function setTry() {
+    alert('Hello this is to try omething new');
 }
