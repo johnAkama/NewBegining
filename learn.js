@@ -72,7 +72,21 @@ for (let i = 2; i <= n; i++) {
     }
 } */
 
+/* // Outer Variable
+let userName = 'John';
 //Function
 function setTry() {
-    alert('Hello this is to try omething new');
+    let userName = 'Bob';
+    let message = 'Hello, ' + userName; //Bob
+    alert(message);
 }
+
+setTry();
+alert(userName);
+ */
+
+function showMessage(from, text) {
+    alert(from + ' : ' + text);
+}
+
+showMessage('Kaneshie', 'I am standed, please call the police');
