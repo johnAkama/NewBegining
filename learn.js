@@ -1,4 +1,4 @@
-'use strict';
+/* 'use strict'; */
 
 const PromptSync = require('prompt-sync');
 
@@ -354,6 +354,15 @@ console.log(accumulator.value);
  */
 
 /********************************* Data types *********************************/
+/* let n = 66.7876655;
+console.log(n.toFixed(2)); */
 
-let n = 66.7876655;
-console.log(n.toFixed(2));
+/* let str = 'Hello';
+str.test = 5;
+
+console.log(str.test) */
+
+
+/******************************* Strings  ***************************************/
+
+
