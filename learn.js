@@ -362,7 +362,153 @@ str.test = 5;
 
 console.log(str.test) */
 
-
 /******************************* Strings  ***************************************/
 
+/* function sum(a, b) {
+    return a + b;
+}
 
+console.log(`1+2 = ${sum(3, 5)}`); */
+
+/* let str = 'Hello'; */
+
+/* console.log(str[0]);
+console.log(str.at(0));
+console.log(str.length - 1);
+console.log(str.at(-1));
+ */
+
+/* for (let key of str) {
+    console.log(key);
+}
+ */
+
+/* let str = 'As sly as a fox, as strong as an ox';
+let target = 'l';
+
+let pos = 0;
+
+while (true) {
+    let foundPos = str.indexOf(target, pos); //Search for the target string starting from position 'pos'
+    if (foundPos === -1) break; //Did not find the target, exit the loop
+
+    console.log(`Fond item at position ` + foundPos); //Log the position where the target was found
+    pos = foundPos + 1; //Move to the next position after the found one
+} */
+
+/* let str = 'stringify';
+console.log(str.substr(-4,3)) */
+
+/* console.log('e'.codePointAt()); */
+
+/* function ucFirst(str) {
+    if (!str) return str; //Check if the string is empty or falsy, return it as is)
+    return str[0].toUpperCase() + str.substr(1);
+}
+
+console.log(ucFirst('akama')); */
+
+/* function checkSpam(str) {
+    if (!str) return str;
+    let lowerStr = str.toLowerCase(); //Convert the input string to lowercase for case-insensitive comparison
+    return lowerStr.includes('viagra') || lowerStr.includes('xxx'); //Check if the string contains 'viagra' or 'xxx'
+}
+
+console.log(checkSpam('buy ViAgRA now'));
+console.log(checkSpam('free xxxxx'));
+console.log(checkSpam('innocent rabbit')); */
+
+/* function truncate(str, maxLenght) {
+    if (!str) return str;
+    if (str.length > maxLenght) {
+        let finalStr = str.slice(0, maxLenght - 1) + '…'; //Truncate the string and add an ellipsis if it exceeds the maximum length
+        return finalStr.length;
+    }
+}
+
+console.log(truncate('What I know about Javascript', 16));
+console.log(truncate('Hello World', 8)); */
+
+/* function extractCurrencyVale(cost) {
+    if (!cost) return cost;
+    return +cost.slice(1);
+}
+console.log(extractCurrencyVale('$120')); */
+
+/* function startTime() {
+    return Date.now();
+}
+
+function endTime() {
+    return Date.now();
+}
+
+function diffTime(start, end) {
+    return end - start;
+}
+
+function checkRunTime() {
+    let sumArray = [
+        100, 22, 334, 45, 66, 78, 89, 90, 123, 456, 789, 234, 567, 890, 3, 4,
+        55, 6, 7, 4, 5, 67, 8, 9, 0, 12, 34, 56, 78, 90, 11, 22, 33, 44, 55, 66,
+        77, 88, 99, 100, 101, 202, 303, 404, 505, 606, 707, 808, 909, 111, 222,
+        333, 444, 555, 666, 777, 888, 999, 110, 220, 330, 440, 550, 660, 770,
+        880, 990, 121, 232, 343, 454, 565, 676, 787, 898, 909, 131, 242, 353,
+        464, 575, 686, 797, 808, 141, 252, 363, 474, 585, 696, 707, 181, 292,
+        393, 494, 595, 606, 212, 323, 434, 545, 656, 767, 878, 989,
+    ];
+    let start = startTime();
+    sumArray.shift();
+    let end = endTime();
+
+    return end - start;
+}
+
+console.log('Time taken: ' + checkRunTime() + 'ms'); */
+
+/* let fruits = ['Apple', 'Orange', 'Plum'];
+
+for (let fruit in fruits) {
+    console.log(fruits[fruit]);
+} */
+
+/* let styles = ['Jazz', 'Blues'];
+styles.push('Rock-n-ROll'); // add item to the end
+styles[Math.floor((styles.length - 1) / 2)] = 'Classics'; // replace the value of the middle item
+console.log(styles.shift()); // remove first item
+styles.unshift('Rap', 'Reggae'); // add items to the beginning
+
+console.log(styles); */
+
+/* let arr = ['a', 'b'];
+
+arr.push(function () {
+    console.log('calling this function');
+    return true;
+});
+
+console.log(arr[2]()); // ? */
+
+function sumInutArray() {
+    const prompt = new PromptSync();
+    let arrSum = [];
+    let value;
+    let con = true;
+
+    let sum = 0;
+    do {
+        value = prompt('Enter value to add to the array: ', 'Type here');
+        if (value == '' || value == null || !isFinite(value) || value === NaN) {
+            con = false;
+            for (let i = 0; i < arrSum.length; i++) {
+                sum = sum + +arrSum[i];
+            }
+        } else {
+            arrSum.push(value);
+        }
+    } while (con);
+    console.log(arrSum);
+    return sum;
+}
+
+console.log(sumInutArray());
