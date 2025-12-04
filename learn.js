@@ -489,7 +489,7 @@ arr.push(function () {
 
 console.log(arr[2]()); // ? */
 
-function sumInutArray() {
+/* function sumInutArray() {
     const prompt = new PromptSync();
     let arrSum = [];
     let value;
@@ -511,4 +511,36 @@ function sumInutArray() {
     return sum;
 }
 
-console.log(sumInutArray());
+
+
+console.log(sumInutArray()); */
+
+function getMaxSubSum(arr) {
+    let maxSum = 0;
+    let temporalSm = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        temporalSm += arr[i];
+        let arr2 = arr.slice(i);
+        return arr2;
+
+        /*   for (let j = 0; j < arr2.length; j++) {
+            temporalSm += arr2[j];
+            if (temporalSm > maxSum) {
+                maxSum = temporalSm;
+            }
+        }
+        arr.shift(); */
+    }
+    return maxSum;
+}
+
+// Function to create a random array
+/* function randomArray(length, min, max) {
+    return Array.from(
+        { length },
+        () => Math.floor(Math.random() * (max - min + 1)) + min
+    );
+} */
+
+console.log(getMaxSubSum[(2, 1, -5, 4, -3, 6)]);
