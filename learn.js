@@ -518,21 +518,24 @@ console.log(sumInutArray()); */
 function getMaxSubSum(arr) {
     let maxSum = 0;
     let temporalSm = 0;
+    let temporalSm2 = 0;
 
     for (let i = 0; i < arr.length; i++) {
-        temporalSm += arr[i];
-        let arr2 = arr.slice(i);
-        return arr2;
+        temporalSm += arr[i]; // Add the current element to the temporary sum
+        let arr2 = arr.slice(i + 1); // Create a new array excluding the current element
+        console.log('Temporary Sum 1: ' + temporalSm);
 
-        /*   for (let j = 0; j < arr2.length; j++) {
-            temporalSm += arr2[j];
+        for (let j = 0; j < arr2.length; j++) {
+            temporalSm2 += arr2[j];
+            console.log('Temporary Sum 2: ' + temporalSm2);
+            /* temporalSm += arr2[j];
             if (temporalSm > maxSum) {
                 maxSum = temporalSm;
-            }
+            } */
         }
-        arr.shift(); */
+        //arr.shift();
     }
-    return maxSum;
+    return true;
 }
 
 // Function to create a random array
@@ -543,4 +546,4 @@ function getMaxSubSum(arr) {
     );
 } */
 
-console.log(getMaxSubSum[(2, 1, -5, 4, -3, 6)]);
+console.log(getMaxSubSum([2, 1, -5, 4, -3, 6]));
