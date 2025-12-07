@@ -532,4 +532,5 @@ console.log(sumInutArray()); */
 /************************ Arra methos *******************/
 let arr = ['I', 'love', 'JavaScript', 'too', '!'];
 
-console.log(arr.splice(1, 2, 'testing', '1234'));
+arr.splice(1, 0, 'testing', '1234', 'elemtn3'); // from index 1 remove 1 element and add 'testing' and '1234'
+console.log(arr);
