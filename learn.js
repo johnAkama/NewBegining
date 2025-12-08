@@ -530,7 +530,185 @@ console.log(sumInutArray()); */
     let partialSum = 0;*/
 
 /************************ Arra methos *******************/
-let arr = ['I', 'love', 'JavaScript', 'too', '!'];
+/* let arr = ['I', 'love', 'JavaScript', 'too', '!'];
 
-arr.splice(1, 0, 'testing', '1234', 'elemtn3'); // from index 1 remove 1 element and add 'testing' and '1234'
+arr.splice(1, 0, 'testing', '1234', 'elemtn3'); // Insert 3 elements at index 1
+console.log(arr); */
+
+/*********************** Iteration  **************************/
+/* let range = {
+    from: 1,
+    to: 5,
+};
+
+range[Symbol.iterator] = function () {
+    return {
+        current: this.from,
+        last: this.to,
+        next() {
+            if (this.current <= this.last) {
+                return { done: false, value: this.current++ };
+            } else {
+                return { done: true, value: undefined };
+            }
+        },
+    };
+};
+
+for (let num of range) {
+    console.log(num);
+} // 1, 2, 3, 4, 5 */
+
+/* let arrayLike = {
+    0: 'Hello',
+    1: 'World',
+    length: 2,
+};
+
+let arr = Array.from(arrayLike);
+
 console.log(arr);
+ */
+
+/* let map = new Map();
+map.set('banana', 1);
+map.set('ornge', 2);
+map.set('meat', 4);
+
+let obj = Object.fromEntries(map.entries());
+
+console.log(obj);
+ */
+
+/* let set = new Set();
+
+const recentlyViewed = {
+    user1: { name: 'John', age: 30, city: 'New York' },
+    user2: { name: 'John', age: 30, city: 'New York' },
+    user3: { name: 'John', age: 30, city: 'New York' },
+    user4: { name: 'John', age: 30, city: 'New York' },
+    user5: { name: 'John', age: 30, city: 'New York' },
+    user6: { name: 'John', age: 30, city: 'New York' },
+    user7: { name: 'John', age: 30, city: 'New York' },
+    user8: { name: 'Ann', age: 20, city: 'London' },
+    user9: { name: 'Ann', age: 20, city: 'London' },
+    user10: { name: 'Ann', age: 20, city: 'London' },
+    user11: { name: 'Ann', age: 20, city: 'London' },
+    user12: { name: 'Ann', age: 20, city: 'London' },
+    user13: { name: 'Ann', age: 20, city: 'London' },
+    user14: { name: 'Pete', age: 25, city: 'Paris' },
+    user15: { name: 'Pete', age: 25, city: 'Paris' },
+    user16: { name: 'Pete', age: 25, city: 'Paris' },
+    user27: { name: 'Pete', age: 25, city: 'Paris' },
+    user18: { name: 'Pete', age: 25, city: 'Paris' },
+    user19: { name: 'Pete', age: 25, city: 'Paris' },
+    user10: { name: 'Pete', age: 25, city: 'Paris' },
+    user21: { name: 'Pete', age: 25, city: 'Paris' },
+    user22: { name: 'Pete', age: 25, city: 'Paris' },
+    user23: { name: 'Pete', age: 25, city: 'Paris' },
+    user24: { name: 'Pete', age: 25, city: 'Paris' },
+    user25: { name: 'Pete', age: 25, city: 'Paris' },
+    user26: { name: 'Peter', age: 25, city: 'Paris' },
+    user27: { name: 'Pete', age: 25, city: 'Paris' },
+};
+
+for (let key in recentlyViewed) {
+    set.add(recentlyViewed[key]);
+}
+
+for (let user of set) {
+    console.log(user);
+}
+console.log(`Total unique users: ` + set.size);
+ */
+
+/* let set = new Set(['oranges', 'apples', 'bananas']);
+
+for (let value of set) console.log(value);
+
+// the same with forEach:
+set.forEach((value, valueAgain, set) => {
+    console.log(value);
+});
+ */
+
+/* function unique(arr) {
+    let set = new Set(arr);
+    let newArr = [];
+
+    if (!set.size) {
+        return [];
+    } else {
+        for (let items of set) {
+            newArr.push(items);
+        }
+    }
+    return newArr;
+}
+
+let values = ['nap', 'teachers', 'cheaters', 'PAN', 'ear', 'era', 'hectares'];
+
+console.log(unique(values)); */
+
+/* function aclean(arr){
+    let map = new Map()
+    for (let items of arr){
+        let sorted = items.toLowerCase().split('').sort().join('');
+    map.set(sorted, items);
+    //set.add(items.split('').sort().join('').toLowerCase());
+}
+return Array.from(map.values());
+}
+
+let arr = ['nap', 'teachers', 'cheaters', 'PAN', 'ear', 'era', 'hectares'];
+
+console.log(aclean(arr)); */
+
+let map = new Map();
+
+map.set("name", "John");
+
+let keys = Array.from(map.keys());
+
+// Error: keys.push is not a function
+keys.push("more");
+
+console.log(keys)
+
+
+
+/* arr2 = Array.from(set);
+console.log(arr2); */
+
+/************************* Sort Characters in String *************************/
+
+// Method 1: Sort alphabetically (ascending)
+/* function sortCharacters(str) {
+    return str.split('').sort().join('');
+}
+
+// Method 2: Sort reverse (descending)
+function sortCharactersReverse(str) {
+    return str.split('').sort().reverse().join('');
+}
+
+// Method 3: Sort with custom comparator (case-insensitive)
+function sortCharactersCaseInsensitive(str) {
+    return str.split('').sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase())).join('');
+}
+
+// Method 4: Sort by frequency (most frequent first)
+function sortByFrequency(str) {
+    const freq = {};
+    for (let char of str) {
+        freq[char] = (freq[char] || 0) + 1;
+    }
+    return str.split('').sort((a, b) => freq[b] - freq[a]).join('');
+} */
+
+// Examples
+/* console.log('=== Sort Characters Examples ===');
+console.log(sortCharacters('javascript')); // aaciprstv
+console.log(sortCharactersReverse('javascript')); // vtsrpicaja
+console.log(sortCharactersCaseInsensitive('JavaSCript')); // aaciprstv
+console.log(sortByFrequency('mississippi')); // iiiisspppm */
