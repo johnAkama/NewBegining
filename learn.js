@@ -664,7 +664,7 @@ let arr = ['nap', 'teachers', 'cheaters', 'PAN', 'ear', 'era', 'hectares'];
 
 console.log(aclean(arr)); */
 
-let map = new Map();
+/* let map = new Map();
 
 map.set("name", "John");
 
@@ -673,9 +673,7 @@ let keys = Array.from(map.keys());
 // Error: keys.push is not a function
 keys.push("more");
 
-console.log(keys)
-
-
+console.log(keys) */
 
 /* arr2 = Array.from(set);
 console.log(arr2); */
@@ -712,3 +710,15 @@ console.log(sortCharacters('javascript')); // aaciprstv
 console.log(sortCharactersReverse('javascript')); // vtsrpicaja
 console.log(sortCharactersCaseInsensitive('JavaSCript')); // aaciprstv
 console.log(sortByFrequency('mississippi')); // iiiisspppm */
+
+let john = { naame: 'john' };
+let array = [john];
+
+console.log(array);
+
+john = null;
+
+console.log(
+    /*  */
+    `The object has been deleted ${john} but the copy by reference is stil working just fine ${array}`
+);
