@@ -711,14 +711,103 @@ console.log(sortCharactersReverse('javascript')); // vtsrpicaja
 console.log(sortCharactersCaseInsensitive('JavaSCript')); // aaciprstv
 console.log(sortByFrequency('mississippi')); // iiiisspppm */
 
-let john = { naame: 'john' };
+/* let john = { naame: 'john' };
 let array = [john];
-
 console.log(array);
-
 john = null;
-
 console.log(
-    /*  */
     `The object has been deleted ${john} but the copy by reference is stil working just fine ${array}`
-);
+
+    ;
+); */
+/* 
+let cache = new Map();
+
+function process(obj) {
+    if (!cache.has(obj)) {
+        let result = obj;
+        cache.set(obj, result);
+        return result;
+    }
+    return cache.get(obj);
+}
+
+let obj = {};
+let result1 = process(obj);
+let result2 = process(obj);
+
+obj = null;
+console.log(cache.size); */
+
+/* let messages = [
+    { text: 'Hello', from: 'John' },
+    { text: 'How goes?', from: 'John' },
+    { text: 'See you soon', from: 'Alice' },
+];
+
+let weakset = new WeakSet();
+for (let items of messages) {
+    weakset.add(items);
+}
+
+console.log(weakset.has(messages[0]));
+let isRead = Symbol('isRead');
+messages[0][isRead] = true;
+
+console.log(messages[0]); */
+
+/* let messages = [
+{ text: 'Hello', from: 'John' },
+    { text: 'How goes?', from: 'John' },
+    { text: 'See you soon', from: 'Alice' },
+];
+
+let readMap = new WeakMap();
+
+readMap.set(messages[0], new Date(2017, 1, 1));
+
+console.log(readMap.get(messages[0])); */
+
+/* let prices = {
+    banana: 1,
+    orange: 2,
+    meat: 4,
+};
+
+let arrayPrices = Object.entries(prices); */
+
+/* let doublePrices = Object.fromEntries(
+    Object.entries(prices).map((entry) => [entry[0], entry[1]])
+); */
+
+/* console.log(doublePrices); */
+/* console.log(arrayPrices); */
+
+/* let salaries = {
+    John: 100,
+    Pete: 300,
+    Mary: 250,
+};
+
+function sumSalaries(salaries) {
+    let sum = 0;
+    if (salaries) {
+        salaries = Object.values(salaries);
+        for (items of salaries) {
+            sum = sum + items;
+        }
+    }
+    return sum;
+}
+console.log(sumSalaries({})); */
+
+let user = {
+    name: 'John',
+    age: 30,
+};
+
+function count(obj) {
+    return Object.keys(obj).length;
+}
+
+console.log(count(user));
