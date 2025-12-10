@@ -801,13 +801,13 @@ function sumSalaries(salaries) {
 }
 console.log(sumSalaries({})); */
 
-let user = {
-    name: 'John',
+/* let user = {
+name: 'John',
     age: 30,
 };
 
 function count(obj) {
     return Object.keys(obj).length;
 }
+console.log(count(user)); */
 
-console.log(count(user));
