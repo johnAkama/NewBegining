@@ -1,4 +1,4 @@
-function isValidWWalk(walk) {
+/* function isValidWWalk(walk) {
     //let timing be defined here
 
     switch (true) {
@@ -25,5 +25,14 @@ function isValidWWalk(walk) {
             break;
     }
 }
+ */
+//console.log(isValidWWalk(['n', 's', 'n', 's', 'n', 's', 'n', 's', 'n', 's']));
+/* 
+let sentence = "Learning JavaScript is fun!";
+let extracted = sentence.slice(9, -5);
 
-console.log(isValidWWalk(['n', 's', 'n', 's', 'n', 's', 'n', 's', 'n', 's']));
+console.log(extracted); */
+message = 'Welcome to freeCodeCamp!';
+let greetingWord = message.slice(0, 7);
+
+console.log(greetingWord)
