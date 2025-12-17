@@ -1,5 +1,6 @@
-/* let randomNum2 = Math.random() * (max - min) + min;
-console.log(randomNum2); */
-
-let num = 3.14159;
-console.log(num.toFixed());
+const a = 2;
+if (1 == "1") {
+  let b = 3;
+  console.log(a + b);
+}
+console.log(b);
