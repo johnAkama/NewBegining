@@ -1,13 +1,11 @@
 'use strict';
-const programmingLanguages = [
-    'JavaScript',
-    'Python',
-    'C+++',
-    { name: 'Java', age: 20 },
-];
+/* const numbers = [1, 2, 3];
+console.log(numbers[0]); */
 
-/* console.log(programmingLanguages[3]); */
-let sliceArray = programmingLanguages.slice(2);
-programmingLanguages[3].name = 'C#';
+/* const arr1 = [1, 2, 3];
+const arr2 = [...arr1, 4, 5];
+console.log(arr2); */
 
-console.log(sliceArray);
+const fruits = [];
+
+console.log(fruits.shift());
