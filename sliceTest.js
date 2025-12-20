@@ -9,3 +9,4 @@ console.log(arr2); */
 const fruits = [];
 
 console.log(fruits.shift());
+it 
