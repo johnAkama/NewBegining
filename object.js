@@ -18,11 +18,15 @@ console.log(job) */
 
 delete car.year;
 console.log(car.year); */
-
+/* 
 const person = {
   name: "Alice",
   age: 30
 };
 
 console.log(person.hasOwnProperty("name")); // true
-console.log(person.hasOwnProperty("job")); // false
+console.log(person.hasOwnProperty("job")); // false */
+
+
+let obj = {a: undefined};
+console.log(obj.a !== undefined);
