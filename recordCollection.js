@@ -22,7 +22,6 @@ function updateRecords(records, id, prop, value) {
     // If value is an empty string, delete the property
     if (value === '') {
         delete records[id][prop];
-        
     }
     // If prop is not "tracks" and value is not empty, assign the value
     else if (prop !== 'tracks') {
