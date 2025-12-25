@@ -9,11 +9,10 @@ function findLongestWordLength(sentence) {
         highest.push(word.length);
     });
 
-    return sentenceObjec[highest.indexOf(Math.max(...highest))];
+    //return sentenceObjec[highest.indexOf(Math.max(...highest))]; //return longest string
+    return Math.max(...highest); //return  longest string size
 }
 
 console.log(
-    findLongestWordLength(
-        'Test the best superman test ever jumped here in junesburgs'
-    )
+    findLongestWordLength('The quick brown fox jumped over the lazy dog')
 );
