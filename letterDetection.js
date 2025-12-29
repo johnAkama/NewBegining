@@ -10,11 +10,9 @@ function fearNotLetter(strg) {
             strg.indexOf(newAlphabet[i + 1]) !== -1
         ) {
             return newAlphabet[i];
-            break;
-        } else {
-            return undefined;
         }
     }
+    return undefined;
 }
 
-console.log(fearNotLetter('abcdefghijklmno'));
+console.log(fearNotLetter('abcde'));
