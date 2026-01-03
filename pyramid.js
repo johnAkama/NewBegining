@@ -1,24 +1,21 @@
-function pyramid(pattern, rows, bool) {
-    let result = '';
+function pyramid(char, rows, inverted) {
+  let result = "\n";
 
-    if (bool) {
-        let tab = ' ';
-        for (let i = 0; i < rows; i++) {
-            console.log(
-                '\n' + tab.repeat(rows - i) + pattern.repeat(2 * i + 1) + '\n'
-            );
-            result += '\\n' + tab.repeat(rows - i) + pattern.repeat(2 * i + 1);
-        }
-    } else {
-        let tab = ' ';
-        for (let i = rows - 1; i >= 0; i--) {
-            console.log(
-                '\n' + tab.repeat(rows - i) + pattern.repeat(2 * i + 1) + '\n'
-            );
-            result += '\\n' + tab.repeat(rows - i) + pattern.repeat(2 * i + 1);
-        }
+  if (!inverted) {
+    // Vertex facing UP
+    for (let i = 0; i < rows; i++) {
+      const spaces = " ".repeat(rows - i - 1);
+      const pattern = char.repeat(2 * i + 1);
+      result += spaces + pattern + "\n";
     }
-    return result;
-}
+  } else {
+    // Vertex facing DOWN
+    for (let i = rows - 1; i >= 0; i--) {
+      const spaces = " ".repeat(rows - i - 1);
+      const pattern = char.repeat(2 * i + 1);
+      result += spaces + pattern + "\n";
+    }
+  }
 
-console.log(pyramid('p', 4, true));
+  return result;
+}
