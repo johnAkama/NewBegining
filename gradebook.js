@@ -8,46 +8,36 @@ function getAverage(scores) {
 }
 
 function getGrade(score) {
-    if (score === 100) {
-        return 'A+';
-    } else if (score >= 90 && score <= 99) {
-        return 'A';
-    } else if (score >= 80 && score <= 89) {
-        return 'B';
-    } else if (score >= 70 && score <= 79) {
-        return 'C';
-    } else if (score >= 60 && score <= 69) {
-        return 'D';
-    } else if (score >= 0 && score <= 59) {
-        return 'F';
-    } else {
-        return 'Error';
-    }
+    if (score === 100) return 'A+';
+    if (score >= 90) return 'A';
+    if (score >= 80) return 'B';
+    if (score >= 70) return 'C';
+    if (score >= 60) return 'D';
+    return 'F';
 }
 
-function hasPassingGrade(getGrade) {
-    return getGrade === 'F' ? false : true;
+function hasPassingGrade(score) {
+    return getGrade(score) !== 'F';
 }
 
 const studentMsg = (scores, score) => {
     let averageScore = getAverage(scores);
     let grade = getGrade(score);
-    let passing = hasPassingGrade(grade)
+    let passing = hasPassingGrade(score)
         ? 'You passed the course.'
         : 'You failed the course.';
 
     return (
-        '"Class average: ' +
+        'Class average: ' +
         averageScore +
         '. Your grade: ' +
         grade +
         '. ' +
-        passing +
-        '"'
+        passing
     );
 };
 
-console.log(studentMsg([92, 88, 12, 77, 57, 100, 67, 38, 97, 89], 37));
+console.log(studentMsg([12, 22, 32, 42, 52, 62, 72, 92], 85));
 
 /* module.exports = {
     getAverage,
