@@ -9,11 +9,11 @@ function getSum(num1, num2) {
 console.log(getSum(9, 4, 5, 7)); // 7 */
 
 function logArgs() {
-    console.log(Array.from(arguments));
+    console.log(arguments[0]);
     /* for (const arg of arguments) {
         console.log(arg);
     } */
 }
 
 logArgs(1, 2, 3);
-logArgs('Apostolic', 'Church', 'Echo');
+/* logArgs('Apostolic', 'Church', 'Echo'); */
