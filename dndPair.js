@@ -1,5 +1,3 @@
-'use strict';
-
 function pairElement(word) {
     let twoDA = [];
 
