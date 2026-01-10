@@ -6,9 +6,9 @@ const transactions = [
     { amount: 75, type: 'credit' },
 ];
 
-const totalCredit = transactions.filter((item) => item.type === 'cash');
+const totalCredit = transactions.filter((item) => item.type === 'credit');
 let totalAmount = totalCredit.reduce(
-    (accumulator, currentAmount) => accumulator + currentAmount.amount,
+    (accumulator, currentAmount) => accumulator + currentAmount.amount*1.1,
     0
 );
 
